@@ -11,7 +11,7 @@ app.use(cors({
 
 //DATABASE CONNECTION
 try{
-    mongoose.connect(process.env.MONGO_DB)
+    mongoose.connect("mongodb+srv://panda:panda@gow.47mkc4o.mongodb.net/?retryWrites=true&w=majority")
     .then(console.log("DB conected"))
 }
 catch(err){
@@ -50,5 +50,5 @@ app.post('/post_user',(req,res)=>{
 
 })
 
-const port = process.env.Port
+const port = 2000
 app.listen(port,()=>console.log(`server running on port ${port}`))
